@@ -1,0 +1,51 @@
+Mock Server URL: https://f23ce19b-951e-4941-831b-9f3401fad242.mock.pstmn.io
+
+Endpoint: https://f23ce19b-951e-4941-831b-9f3401fad242.mock.pstmn.io//token
+Method: POST
+Request:
+  Body:
+    { "token": "123456"}
+Response:
+  Status: 200 OK
+  Headers:
+    Content-Type: application/json
+  Body:
+   {"token": "123456"}
+
+Endpoint: https://f23ce19b-951e-4941-831b-9f3401fad242.mock.pstmn.io/viewInvoice?barcode=123456
+Method: GET
+Request:
+  Body:
+    {
+  "InvoiceLink": "http://abc.com/invoice.pdf",
+  "Result": {
+    "success": true
+  }
+}
+Response:
+  Status: 200 OK
+  Headers:
+    Content-Type: application/json
+  Body:
+   {
+  "InvoiceLink": "http://abc.com/invoice.pdf",
+  "Result": {
+    "success": true
+  }
+}
+
+Endpoint: https://f23ce19b-951e-4941-831b-9f3401fad242.mock.pstmn.io/sendInvoice
+Method: POST
+Request:
+
+  Body:
+    { "token": "123456"}
+Response:
+  Status: 200 OK
+  Headers:
+    Key: token
+    Value: 123456
+  Body:
+{
+  "status": "Invoice sent successfully"
+}
